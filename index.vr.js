@@ -44,11 +44,11 @@ const TreeField = ({ count=5, side=10, seed }) => {
   );
 };
 
-const HelloText = () => (
+const BigText = ({children}) => (
   <Text
     style={{
       backgroundColor: '#777879',
-      fontSize: 0.8,
+      fontSize: 0.4,
       fontWeight: '400',
       layoutOrigin: [0.5, 0.5],
       paddingLeft: 0.2,
@@ -59,7 +59,7 @@ const HelloText = () => (
         {translate: [0, 0, -3]}
       ],
     }}>
-    hello
+    {children}
   </Text>
 );
 
@@ -79,7 +79,8 @@ const Ground = () => (
 
 const WelcomeToVR = () => (
   <View>
-    <TreeField seed={'blah'} />
+    <TreeField count={10} seed={'nice'} />
+    <BigText>Under Construction</BigText>
     <Ground />
   </View>
 );
